@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Look Up</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1 class="title">Look Up</h1>
+      <div class="input-group">
+        <input type="text" id="universal" placeholder="Enter email or username" aria-label="Universal search input" />
+        <button onclick="universalLookup()">LOOKUP</button>
+      </div>
+    </section>
+
+    <section class="lookup-sections">
+      <article class="lookup-section">
+        <h2 class="section-title">Gravatar Lookup</h2>
+        <div class="input-group">
+          <input type="text" id="gravatar" placeholder="Enter email for Gravatar" aria-label="Gravatar email input" />
+          <button onclick="gravatarLookup()">LOOKUP</button>
+        </div>
+        <div id="gravatar-results" class="profile-card">
+          <img id="gravatar-img" src="" alt="Gravatar profile picture" />
+          <p><strong>Name:</strong> <span id="gravatar-name"></span></p>
+          <p><strong>Location:</strong> <span id="gravatar-location"></span></p>
+          <p><strong>Profile:</strong> <a id="gravatar-profile" href="#" target="_blank"></a></p>
+        </div>
+        <div id="gravatar-loading" class="loading-spinner"></div>
+      </article>
+
+      <article class="lookup-section">
+        <h2 class="section-title">GitHub Lookup</h2>
+        <div class="input-group">
+          <input type="text" id="github" placeholder="Enter GitHub username" aria-label="GitHub username input" />
+          <button onclick="githubLookup()">LOOKUP</button>
+        </div>
+        <div id="github-results" class="profile-card">
+          <img id="github-img" src="" alt="GitHub profile picture" />
+          <p><strong>Username:</strong> <span id="github-username"></span></p>
+          <p><strong>Profile:</strong> <a id="github-profile" href="#" target="_blank"></a></p>
+        </div>
+        <div id="github-loading" class="loading-spinner"></div>
+      </article>
+    </section>
+  </main>
+
+  <div id="notification" class="notification"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
